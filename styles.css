@@ -1,0 +1,35 @@
+
+/* Shared styles (NYU-like structure, palette: deep blue / blue / sky / gray / white) */
+:root{
+  --blue-deep:#0b3d91;
+  --blue:#1e6fd8;
+  --sky:#7fb7ff;
+  --gray-900:#222;
+  --gray-600:#666;
+  --muted:#f4f6f9;
+  --white:#fff;
+  --max-width:1100px;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:var(--white);color:var(--gray-900);line-height:1.5}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+header{background:linear-gradient(180deg,rgba(255,255,255,0.95),rgba(255,255,255,0.9));border-bottom:1px solid #e6e9ee;position:sticky;top:0;z-index:50}
+.topbar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:48px;height:48px;border-radius:6px;background:linear-gradient(135deg,var(--blue-deep),var(--blue));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+nav a{color:var(--gray-900);text-decoration:none;font-weight:600}
+.cta{background:var(--blue);color:var(--white);padding:10px 14px;border-radius:6px;font-weight:700}
+.hero{background:linear-gradient(180deg,rgba(11,61,145,0.92),rgba(30,111,216,0.87));color:var(--white);padding:64px 0}
+.hero .inner{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
+.hero h1{font-size:32px;margin:0 0 12px 0}
+.btn-primary{background:var(--sky);color:var(--blue-deep;padding:10px 14px;border-radius:6px;border:none;font-weight:700;cursor:pointer}
+.section{padding:36px 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--white);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(18,33,68,0.06);border:1px solid #eef3fb}
+.split{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.contact-box{background:linear-gradient(180deg,var(--white),#fbfdff);padding:18px;border-radius:8px;border:1px solid #e9f0fb}
+footer{border-top:1px solid #e6e9ee;background:#fff;padding:28px 0;color:var(--gray-600);font-size:14px}
+@media (max-width:900px){.hero .inner{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.split{grid-template-columns:1fr}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}nav ul{display:none}}
